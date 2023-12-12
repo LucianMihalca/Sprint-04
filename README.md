@@ -81,3 +81,49 @@ en el archivo .vscode/launch.json está la configuración del debugger.
   ]
 }
 ```
+
+domain: Contiene la lógica de negocio pura (entidades y repositorios de dominio).
+Todo.ts: Entidad Todo.
+TodoRepository.ts: Interfaz del repositorio para abstraer la persistencia de datos.
+/application: Lógica de aplicación, como servicios que utilizan entidades de dominio.
+TodoService.ts: Servicios que contienen la lógica de aplicación, como añadir o eliminar tareas.
+/infrastructure: Implementaciones específicas de infraestructura, como base de datos, API, y la web.
+/persistence: Implementaciones concretas de los repositorios de dominio.
+TodoLocalStorageRepository.ts: Implementación del repositorio usando localStorage.
+TodoDatabaseRepository.ts: Implementación del repositorio usando una base de datos.
+/api: Controladores y rutas para la API REST.
+TodoController.ts: Controladores para manejar las solicitudes HTTP relacionadas con las tareas.
+/web: Código relacionado con la interfaz de usuario.
+TodoView.ts: Clase que maneja la representación y eventos de la interfaz de usuario.
+TodoViewModel.ts: Representa un modelo intermedio entre la vista y la lógica de aplicación.
+/config: Configuración del servidor y otras configuraciones globales.
+server.ts: Configuración y lanzamiento del servidor Express.js.
+/test: Pruebas unitarias y de integración para cada capa.
+
+## Estructura de Carpetas y Directorios
+
+```
+/todo-list-app
+  /src
+    /domain
+      - Todo.ts
+      - TodoRepository.ts
+    /application
+      - TodoService.ts
+    /infrastructure
+      /persistence
+        - TodoLocalStorageRepository.ts
+        - TodoDatabaseRepository.ts
+      /api
+        - TodoController.ts
+      /web
+        - TodoView.ts
+        - TodoViewModel.ts
+    /config
+      - server.ts
+  /test
+    /domain
+    /application
+    /infrastructure
+
+```
