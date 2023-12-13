@@ -1,4 +1,4 @@
-import { IIdGenerator } from '../../../domain/IIdGenerator';
+import { IIdGenerator } from '../../../domain/interfaces/IIdGenerator';
 import { v4 as uuid4 } from 'uuid';
 
 /**

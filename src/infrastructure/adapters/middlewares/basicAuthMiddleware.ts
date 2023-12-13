@@ -12,10 +12,19 @@ import { Request, Response, NextFunction } from 'express';
  */
 export const basicAuthMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const authHeader = req.headers.authorization;
+  const envUser = process.env.USER_NAME;
+  const envPassword = process.env.PASSWORD;
 
-  if (!authHeader || !authHeader.startsWith('Basic ')) {
-    return res.status(401).send('Acceso no autorizado');
+  if (authHeader && authHeader.startsWith('Basic ')) {
+    const base64Credentials = authHeader.split(' ')[1];
+    const credentials = Buffer.from(base64Credentials, 'base64').toString('utf8');
+    const [username, password] = credentials.split(':');
+
+    if (username === envUser && password === envPassword) {
+      next();
+      return;
+    }
   }
 
-  next();
+  res.status(401).send('Acceso no autorizado');
 };

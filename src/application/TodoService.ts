@@ -1,6 +1,6 @@
 import { TodoRepository } from '../repositories/TodoRepository';
 import { Todo } from '../domain/entities/Todo';
-import { IIdGenerator } from '../domain/IIdGenerator';
+import { IIdGenerator } from '../domain/interfaces/IIdGenerator';
 
 // Mapa como estructura de almacenamiento de los objetos Todo, utilizando su ID como clave.
 let todosMap = new Map<string, Todo>();

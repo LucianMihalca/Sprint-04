@@ -1,3 +1,4 @@
+import dotenv from 'dotenv';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
@@ -6,8 +7,9 @@ import { noCacheMiddleware } from './infrastructure/adapters/middlewares/noCache
 import { basicAuthMiddleware } from './infrastructure/adapters/middlewares/basicAuthMiddleware';
 import { loggerMiddleware } from './infrastructure/adapters/middlewares/loggerMiddleware';
 
+dotenv.config();
 const app = express();
-const port: number = 3000;
+
 
 // Middleware para parsear el cuerpo de las solicitudes en formato JSON
 app.use(express.json());
@@ -28,9 +30,10 @@ app.use(basicAuthMiddleware);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // Rutas para la funcionalidad de Todo
-app.use('/api', todoRouter);
+app.use('/', todoRouter);
 
 // Iniciar el servidor y escuchar en el puerto especificado
+const port: number = 3000;
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
