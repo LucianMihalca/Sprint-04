@@ -86,7 +86,7 @@ export class TodoController {
       const { id } = req.params;
       this.todoService.removeTodo(id);
       logger.log(`Todo eliminado con id: ${id}`);
-      res.status(204).send();
+      res.status(200).send(`Todo eliminado con id: ${id}`);
     } catch (error) {
       if (error instanceof Error) {
         logger.error(`Error al eliminar Todo: ${error.message}`);

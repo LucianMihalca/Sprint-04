@@ -103,27 +103,34 @@ server.ts: Configuración y lanzamiento del servidor Express.js.
 ## Estructura de Carpetas y Directorios
 
 ```
-/todo-list-app
-  /src
-    /domain
-      - Todo.ts
-      - TodoRepository.ts
-    /application
-      - TodoService.ts
-    /infrastructure
-      /persistence
-        - TodoLocalStorageRepository.ts
-        - TodoDatabaseRepository.ts
-      /api
-        - TodoController.ts
-      /web
-        - TodoView.ts
-        - TodoViewModel.ts
-    /config
-      - server.ts
-  /test
-    /domain
-    /application
-    /infrastructure
+
+├── __tests__
+│   └── application
+│       └── TodoServices.test.ts
+├── application
+│   └── TodoService.ts
+├── domain
+│   ├── entities
+│   │   └── Todo.ts
+│   └── interfaces
+│       └── IIdGenerator.ts
+├── index.ts
+├── infrastructure
+│   ├── adapters
+│   │   ├── controller
+│   │   │   └── TodoController.ts
+│   │   ├── middlewares
+│   │   │   ├── basicAuthMiddleware.ts
+│   │   │   ├── loggerMiddleware.ts
+│   │   │   └── noCacheMiddleware.ts
+│   │   └── routes
+│   │       └── todoRoutes.ts
+│   └── services
+│       ├── idGenerator
+│       │   └── UuidGenerator.ts
+│       └── logger
+│           └── logger.ts
+└── repositories
+    └── TodoRepository.ts
 
 ```
