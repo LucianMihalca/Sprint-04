@@ -82,24 +82,6 @@ en el archivo .vscode/launch.json está la configuración del debugger.
 }
 ```
 
-domain: Contiene la lógica de negocio pura (entidades y repositorios de dominio).
-Todo.ts: Entidad Todo.
-TodoRepository.ts: Interfaz del repositorio para abstraer la persistencia de datos.
-/application: Lógica de aplicación, como servicios que utilizan entidades de dominio.
-TodoService.ts: Servicios que contienen la lógica de aplicación, como añadir o eliminar tareas.
-/infrastructure: Implementaciones específicas de infraestructura, como base de datos, API, y la web.
-/persistence: Implementaciones concretas de los repositorios de dominio.
-TodoLocalStorageRepository.ts: Implementación del repositorio usando localStorage.
-TodoDatabaseRepository.ts: Implementación del repositorio usando una base de datos.
-/api: Controladores y rutas para la API REST.
-TodoController.ts: Controladores para manejar las solicitudes HTTP relacionadas con las tareas.
-/web: Código relacionado con la interfaz de usuario.
-TodoView.ts: Clase que maneja la representación y eventos de la interfaz de usuario.
-TodoViewModel.ts: Representa un modelo intermedio entre la vista y la lógica de aplicación.
-/config: Configuración del servidor y otras configuraciones globales.
-server.ts: Configuración y lanzamiento del servidor Express.js.
-/test: Pruebas unitarias y de integración para cada capa.
-
 ## Estructura de Carpetas y Directorios
 
 ```
@@ -134,3 +116,30 @@ server.ts: Configuración y lanzamiento del servidor Express.js.
     └── TodoRepository.ts
 
 ```
+
+TodoService (application/TodoService.ts)
+El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo. Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
+
+**Características Principales**:
+
+Almacenamiento de Todos: Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
+Inyección de Dependencias: El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
+Métodos:
+Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
+
+ - getAllTodos(): Retorna todos los Todo almacenados en forma de array. Utiliza Array.from() para convertir los valores del mapa en un array.
+
+ - getTodo(id: string): Busca un Todo específico por su ID y lo retorna. Si no se encuentra, devuelve undefined.
+
+ - addTodo(title: string): Crea un nuevo Todo con el título proporcionado, lo agrega al mapa y lo devuelve. El ID se genera utilizando el idGenerator.
+
+ - updateTodo(id: string): Encuentra un Todo por su ID y alterna su estado de completitud (isCompleted). Lanza un error si el Todo no se encuentra.
+
+ - removeTodo(id: string): Elimina un Todo del mapa utilizando su ID. Lanza un error si el Todo no se encuentra.
+
+**Uso**:
+> [!TIP]
+> Aquí escribes el consejo o tip que quieres compartir.
+
+
+El TodoService es utilizado por los controladores para realizar operaciones en los objetos Todo. La abstracción del repositorio y el uso de un mapa como almacenamiento facilitan la manipulación de los datos y permiten una fácil expansión o modificación del servicio en el futuro.
