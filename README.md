@@ -117,13 +117,17 @@ en el archivo .vscode/launch.json está la configuración del debugger.
 
 ```
 
-TodoService (application/TodoService.ts)
-El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo. Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
+## TodoService (application/TodoService.ts)
+El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo. 
+Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
 
-**Características Principales**:
+  **Características Principales**:
 
-Almacenamiento de Todos: Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
-Inyección de Dependencias: El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
+ Almacenamiento de Todos: 
+ - Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
+
+Inyección de Dependencias: 
+ - El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
 Métodos:
 Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
 

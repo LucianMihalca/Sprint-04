@@ -5,6 +5,7 @@ import { logger } from '../infrastructure/services/logger/logger';
 
 // Mapa como estructura de almacenamiento de los objetos Todo, utilizando su ID como clave.
 export let todosMap = new Map<string, Todo>();
+type TodoResult = Todo | undefined;
 
 export class TodoService implements TodoRepository {
   private idGenerator: IIdGenerator;
@@ -30,8 +31,12 @@ export class TodoService implements TodoRepository {
    * @param id El ID del Todo a buscar.
    * @returns El objeto Todo encontrado, o undefined si no se encuentra.
    */
-  getTodo(id: string): Todo | undefined {
-    return todosMap.get(id);
+  getTodo(id: string): TodoResult {
+    const todo = todosMap.get(id);
+    if (!todo) {
+      throw new Error(`No se encontró un Todo con el ID: ${id}`);
+    }
+    return todo;
   }
 
   /**
@@ -41,6 +46,9 @@ export class TodoService implements TodoRepository {
    * @returns El objeto Todo recién creado.
    */
   addTodo(title: string): Todo {
+    if (title === null || title.trim() === '') {
+      throw new Error('El título del Todo no puede estar vacío.');
+    }
     const id = this.idGenerator.generate();
     const newTodo = new Todo(id, title, false);
     todosMap.set(id, newTodo);
