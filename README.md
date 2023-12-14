@@ -127,19 +127,16 @@ Inyección de Dependencias: El servicio depende de una interfaz IIdGenerator par
 Métodos:
 Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
 
- - getAllTodos(): Retorna todos los Todo almacenados en forma de array. Utiliza Array.from() para convertir los valores del mapa en un array.
+- getAllTodos(): Retorna todos los Todo almacenados en forma de array. Utiliza Array.from() para convertir los valores del mapa en un array.
 
- - getTodo(id: string): Busca un Todo específico por su ID y lo retorna. Si no se encuentra, devuelve undefined.
+- getTodo(id: string): Busca un Todo específico por su ID y lo retorna. Si no se encuentra, devuelve undefined.
 
- - addTodo(title: string): Crea un nuevo Todo con el título proporcionado, lo agrega al mapa y lo devuelve. El ID se genera utilizando el idGenerator.
+- addTodo(title: string): Crea un nuevo Todo con el título proporcionado, lo agrega al mapa y lo devuelve. El ID se genera utilizando el idGenerator.
 
- - updateTodo(id: string): Encuentra un Todo por su ID y alterna su estado de completitud (isCompleted). Lanza un error si el Todo no se encuentra.
+- updateTodo(id: string): Encuentra un Todo por su ID y alterna su estado de completitud (isCompleted). Lanza un error si el Todo no se encuentra.
 
- - removeTodo(id: string): Elimina un Todo del mapa utilizando su ID. Lanza un error si el Todo no se encuentra.
+- removeTodo(id: string): Elimina un Todo del mapa utilizando su ID. Lanza un error si el Todo no se encuentra.
 
-**Uso**:
-> [!TIP]
-> Aquí escribes el consejo o tip que quieres compartir.
-
-
-El TodoService es utilizado por los controladores para realizar operaciones en los objetos Todo. La abstracción del repositorio y el uso de un mapa como almacenamiento facilitan la manipulación de los datos y permiten una fácil expansión o modificación del servicio en el futuro.
+> [!NOTE]
+> El TodoService es utilizado por los controladores para realizar operaciones en los objetos Todo.
+> La abstracción del repositorio y el uso de un mapa como almacenamiento facilitan la manipulación de los datos y permiten una fácil expansión o modificación del servicio en el futuro.
