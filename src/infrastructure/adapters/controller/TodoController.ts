@@ -38,6 +38,10 @@ export class TodoController {
   addTodo(req: Request, res: Response) {
     try {
       const { title } = req.body;
+      if (!title || title.trim() === '') {
+        res.status(400).send('Título inválido');
+        return;
+      }
       const newTodo = this.todoService.addTodo(title);
       logger.log(`Todo añadido con título: ${title}`);
       res.status(201).json(newTodo);
