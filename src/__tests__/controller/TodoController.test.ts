@@ -160,7 +160,7 @@ describe('TodoController', () => {
 
       const response = await request(app).delete(`/todos/${nonExistentId}`);
 
-      expect(response.statusCode).toBe(500); // O 404, según tu lógica de negocio
+      expect(response.statusCode).toBe(500);
       expect(response.text).toContain('No se encontró un Todo con el ID: non-existent-id');
     });
 
