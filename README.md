@@ -22,19 +22,22 @@
 
 #
 
-> [!IMPORTANT] > **⭐️**<br>
+> [!IMPORTANT] 
+> **Nivel ⭐️**<br>
 > ✅ Documenta y adjunta las comprobaciones con Postman o Insomnia en tu proyecto.
 
 #
 
-> [!IMPORTANT] > **⭐️⭐️**<br>
+> [!IMPORTANT] 
+> **Nivel ⭐️⭐️**<br>
 > ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache.<br>
 > ✅ Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.<br>
 > ✅ Añade un middleware devuelva un HTTP Status 401 - Unauthorized si la cabecera de la petición no contiene autenticación básica (usuario y contraseña).
 
 #
 
-> [!IMPORTANT] > **⭐️⭐️⭐️**<br>
+> [!IMPORTANT] 
+> **Nivel ⭐️⭐️⭐️**<br>
 > ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
 Comandos:
