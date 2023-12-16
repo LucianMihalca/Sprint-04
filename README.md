@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > En esta etapa del proyecto, nuestro objetivo es implementar un servidor con<br>
-> [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
+> 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
 
@@ -45,7 +45,9 @@
 
 ## 1. Preparación del Entorno
 Antes de iniciar, asegúrate de tener instalado en tu sistema:<br>
-[![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
+> [!IMPORTANT]
+>
+> [![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
@@ -53,7 +55,6 @@ Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 Clona el repositorio del proyecto a tu máquina local utilizando 
 ```
 git clone [https://github.com/LucianMihalca/Sprint-04.git]
-
 ```
 
 ## 3. Instalación de Dependencias
