@@ -1,7 +1,7 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con
+> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con<br>
 > [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
@@ -44,14 +44,17 @@
 # Pasos para Utilizar el Proyecto
 
 ## 1. Preparación del Entorno
-Antes de iniciar, asegúrate de tener instalado en tu sistema:
+Antes de iniciar, asegúrate de tener instalado en tu sistema:<br>
 [![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
 ## 2. Clonación del Repositorio
 Clona el repositorio del proyecto a tu máquina local utilizando 
-```git clone [https://github.com/LucianMihalca/Sprint-04.git]```.
+```
+git clone [https://github.com/LucianMihalca/Sprint-04.git]
+
+```
 
 ## 3. Instalación de Dependencias
 Navega a la carpeta del proyecto y ejecuta `npm install` para instalar todas las dependencias necesarias.
