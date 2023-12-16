@@ -1,14 +1,14 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa, implementaremos un servidor con 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/), para gestionar la API REST de nuestra lista de tareas .<br> 
+> En esta etapa, implementaremos un servidor con 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/), 
+> para gestionar la API REST de nuestra lista de tareas .<br>
 > Utilizaremos Clean Architecture para asegurar un diseño eficiente y mantenible.
 
 #
 
-> [!TIP] 
-> **Características Clave del Proyecto** 
-> 
+> [!TIP] > **Características Clave del Proyecto**
+>
 > ⚡️ Código en TypeScript para mayor robustez y mantenibilidad.<br>
 > ⚡️ Pruebas Testing para calidad y fiabilidad.<br>
 > ⚡️ CI con GitHub Actions para automatizar pruebas y cambios.
@@ -16,13 +16,15 @@
 #
 
 > [!IMPORTANT]
-> Nivel ⭐️ <br><br>
+> Nivel ⭐️
+>
 > ✅ Documenta y adjunta las comprobaciones con Postman o Insomnia en tu proyecto.
 
 #
 
 > [!IMPORTANT]
-> Nivel ⭐️⭐️ <br><br>
+> Nivel ⭐️⭐️
+>
 > ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache.<br>
 > ✅ Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.<br>
 > ✅ Añade un middleware devuelva un HTTP Status 401 - Unauthorized si la cabecera de la petición no contiene autenticación básica (usuario y contraseña).
@@ -30,7 +32,8 @@
 #
 
 > [!IMPORTANT]
-> Nivel ⭐️⭐️⭐️ <br><br>
+> Nivel ⭐️⭐️⭐️
+>
 > ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
 Comandos:
