@@ -3,9 +3,11 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con Express.js.
+> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/).
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List). 
-> Emplearemos Clean Architecture para garantizar un desarrollo escalable, mantenible y bien organizado, facilitando así la separación de preocupaciones y la flexibilidad en futuras expansiones o modificaciones.
+> Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
+
+
 
 
 
