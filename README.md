@@ -1,13 +1,15 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/).<br>
+> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con
+> [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
 
 #
 
 > [!TIP]
+>
 > **Características Clave del Proyecto**
 >
 > ⚡️ Código en TypeScript para mayor robustez y mantenibilidad.<br>
@@ -37,73 +39,44 @@
 >
 > ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
-Comandos:
+#
 
-Testing:
+# Pasos para Utilizar el Proyecto
 
-```sh
-npm run test
-```
+## 1. Preparación del Entorno
+Antes de iniciar, asegúrate de tener instalado en tu sistema:
+[![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
-Ejecuta los tests ignorando los que existan en dist/
+Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
-Prettier format:
+## 2. Clonación del Repositorio
+Clona el repositorio del proyecto a tu máquina local utilizando 
+```git clone [https://github.com/LucianMihalca/Sprint-04.git]```.
 
-```sh
-npm run prettier-format
-```
+## 3. Instalación de Dependencias
+Navega a la carpeta del proyecto y ejecuta `npm install` para instalar todas las dependencias necesarias.
 
-Ejecuta manualmente el prettier en el proyecto, recomiendo instalar la extensión prettier y que se autoejecute al guardar.
+## 4. Configuración del Entorno
+Configura las variables de entorno necesarias según las instrucciones proporcionadas en el archivo `.env.example`.
 
-Watcher:
+## 5. Iniciando el Proyecto
+Para iniciar el servidor, ejecuta `npm start`. Esto pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
 
-```sh
-npm run dev:watcher
-```
+## 6. Mapa del Proyecto
+Revisa la documentación adjunta para entender la estructura del proyecto y cómo interactuar con las distintas partes de la API.
 
-Ejecuta nodemon usando src/index.ts como archivo inicial
+## 7. Pruebas y Experimentación
+Experimenta con las diferentes funcionalidades de la API, utilizando herramientas como Postman o cURL para enviar solicitudes y recibir respuestas.
 
-Dev Run:
 
-```sh
-npm run dev:run
-```
 
-Ejecuta el proyecto sin watcher
 
-Build:
 
-```sh
-npm run build
-```
 
-Transpila el proyecto en dist/
 
----
 
-## Debugger
 
-en el archivo .vscode/launch.json está la configuración del debugger.
 
-```json
-{
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Lanza debug",
-      "preLaunchTask": "tsc: build - tsconfig.json",
-      "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/index.ts",
-      "outFiles": ["${workspaceFolder}/dist/**/*.js"]
-    }
-  ]
-}
-```
 
 ## Estructura de Carpetas y Directorios
 
@@ -151,31 +124,7 @@ en el archivo .vscode/launch.json está la configuración del debugger.
 
 ## TodoService (application/TodoService.ts)
 
-El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
+> El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
 Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
 
-**Características Principales**:
 
-Almacenamiento de Todos:
-
-- Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
-
-Inyección de Dependencias:
-
-- El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
-  Métodos:
-  Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
-
-- getAllTodos(): Retorna todos los Todo almacenados en forma de array. Utiliza Array.from() para convertir los valores del mapa en un array.
-
-- getTodo(id: string): Busca un Todo específico por su ID y lo retorna. Si no se encuentra, devuelve undefined.
-
-- addTodo(title: string): Crea un nuevo Todo con el título proporcionado, lo agrega al mapa y lo devuelve. El ID se genera utilizando el idGenerator.
-
-- updateTodo(id: string): Encuentra un Todo por su ID y alterna su estado de completitud (isCompleted). Lanza un error si el Todo no se encuentra.
-
-- removeTodo(id: string): Elimina un Todo del mapa utilizando su ID. Lanza un error si el Todo no se encuentra.
-
-> [!NOTE]
-> El TodoService es utilizado por los controladores para realizar operaciones en los objetos Todo.
-> La abstracción del repositorio y el uso de un mapa como almacenamiento facilitan la manipulación de los datos y permiten una fácil expansión o modificación del servicio en el futuro.
