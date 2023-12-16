@@ -1,43 +1,41 @@
-#  API ToDo-LIST.
-
-
+# API ToDo-LIST.
 
 > [!NOTE]
-> En esta entrega crearemos un servidor utilizando Express.js, 
-para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal. 
+> En esta entrega crearemos un servidor utilizando Express.js,
+> para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal.
 
+**1. Añadir una tarea a la lista:**
 
-__1. Añadir una tarea a la lista:__
 - Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
 
-__2. Marcar una tarea como completada:__
--  Crearemos una ruta y un controlador para permitir a los usuarios marcar una tarea como completada.
+**2. Marcar una tarea como completada:**
 
-__3. Eliminar una tarea de la lista:__
+- Crearemos una ruta y un controlador para permitir a los usuarios marcar una tarea como completada.
+
+**3. Eliminar una tarea de la lista:**
+
 - Implementaremos una funcionalidad para eliminar tareas de la lista utilizando una ruta y un controlador adecuados
 
-__4. Mostrar la lista de tareas:__
+**4. Mostrar la lista de tareas:**
+
 - Crearemos una ruta y un controlador para obtener y mostrar la lista completa de tareas a los usuarios.
 
-# 
+#
 
-> [!IMPORTANT]
-> __Nivel ⭐️__<br>
-> ✅ Documenta y adjunta las comprobaciones con una plataforma como Postman o Insomnia en tu proyecto.
+> [!IMPORTANT] > **⭐️**<br>
+> ✅ Documenta y adjunta las comprobaciones con Postman o Insomnia en tu proyecto.
 
+#
 
-# 
-> [!IMPORTANT]
-> __Nivel ⭐️⭐️__<br>
-> ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache. 
-> Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.
+> [!IMPORTANT] > **⭐️⭐️**<br>
+> ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache.<br>
+> ✅ Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.<br>
 > ✅ Añade un middleware devuelva un HTTP Status 401 - Unauthorized si la cabecera de la petición no contiene autenticación básica (usuario y contraseña).
 
-# 
-> [!IMPORTANT]
-> __Nivel ⭐️⭐️⭐️__<br>
-> ✅ Añade testing para comprobar el correcto funcionamiento de la API.
+#
 
+> [!IMPORTANT] > **⭐️⭐️⭐️**<br>
+> ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
 Comandos:
 
@@ -152,18 +150,21 @@ en el archivo .vscode/launch.json está la configuración del debugger.
 ```
 
 ## TodoService (application/TodoService.ts)
-El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo. 
+
+El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
 Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
 
-  **Características Principales**:
+**Características Principales**:
 
- Almacenamiento de Todos: 
- - Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
+Almacenamiento de Todos:
 
-Inyección de Dependencias: 
- - El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
-Métodos:
-Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
+- Los objetos Todo se almacenan en un mapa (todosMap), utilizando su ID como clave para un acceso eficiente.
+
+Inyección de Dependencias:
+
+- El servicio depende de una interfaz IIdGenerator para la generación de identificadores únicos, lo que permite una fácil integración y testing.
+  Métodos:
+  Constructor: Inicializa el servicio con un generador de ID (idGenerator). Esto permite utilizar diferentes estrategias para la generación de IDs, como UUIDs.
 
 - getAllTodos(): Retorna todos los Todo almacenados en forma de array. Utiliza Array.from() para convertir los valores del mapa en un array.
 
