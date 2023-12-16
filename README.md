@@ -1,18 +1,17 @@
-# Ejemplo básico de TS
+#  API ToDo-LIST.
 
 ---
 
-En este ejemplo básico hay:
+> [!NOTE]
+> En esta entrega crearemos un servidor utilizando Express.js, 
+para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal. 
+Implementaremos las siguientes funcionalidades:
 
-- ESLint
-- Prettier
-- ts-jest
-- nodemon
-- VSCode Debugging
-- Github Actions
-- Pequeño ejemplo de código funcional con import
+>**1. Añadir una tarea a la lista**:
+>Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
 
-La configuración del debugger apunta a src/index.ts como archivo de inicio del proyecto.
+
+
 
 Comandos:
 
@@ -87,8 +86,17 @@ en el archivo .vscode/launch.json está la configuración del debugger.
 ```
 
 ├── __tests__
-│   └── application
-│       └── TodoServices.test.ts
+│   ├── application
+│   │   └── TodoServices.test.ts
+│   └── controller
+│       ├── delete
+│       │   └── delete-TodoController.test.ts
+│       ├── get
+│       │   └── get-TodoController.test.ts
+│       ├── post
+│       │   └── post-TodoController.test.ts
+│       └── put
+│           └── put-TodoController.test.ts
 ├── application
 │   └── TodoService.ts
 ├── domain
