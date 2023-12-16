@@ -1,14 +1,13 @@
 #  API ToDo-LIST.
 
----
+
 
 > [!NOTE]
 > En esta entrega crearemos un servidor utilizando Express.js, 
 para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal. 
 Implementaremos las siguientes funcionalidades:
-
 >**1. Añadir una tarea a la lista**:
->Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
+Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
 
 
 
