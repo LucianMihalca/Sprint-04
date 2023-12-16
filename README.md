@@ -8,7 +8,7 @@
 
 > [!TIP] 
 > **Características Clave del Proyecto** 
-#
+> #
 > ⚡️ Código en TypeScript para mayor robustez y mantenibilidad.<br>
 > ⚡️ Pruebas Testing para calidad y fiabilidad.<br>
 > ⚡️ CI con GitHub Actions para automatizar pruebas y cambios.
