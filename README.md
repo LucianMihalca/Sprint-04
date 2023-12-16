@@ -48,13 +48,16 @@ Antes de iniciar, asegúrate de tener instalado en tu sistema:<br>
 
 > [!IMPORTANT]
 >
-> [![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
+> [![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) 
+>
+> [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
 #
 
 **2. Clonación del Repositorio**
+>
 Clona el repositorio del proyecto a tu máquina local utilizando
 
 ```
@@ -64,6 +67,7 @@ git clone [https://github.com/LucianMihalca/Sprint-04.git]
 #
 
 **3. Instalación de Dependencias**
+>
 Para instalar todas las dependencias necesarias navega a la carpeta del proyecto y ejecuta:
 
 ```
@@ -73,6 +77,7 @@ npm install
 #
 
 **4. Para transpilar el proyecto**
+>
 Transpila el código TypeScript en JavaScript en la carpeta ./dist..
 
 ```
@@ -82,6 +87,7 @@ npm run build
 #
 
 **5. Iniciando el Proyecto**
+>
 Esto iniciar el servidor y pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
 
 ```
