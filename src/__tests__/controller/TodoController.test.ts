@@ -72,6 +72,17 @@ describe('TodoController', () => {
       expect(response.body.length).toBe(mockTodos.length);
       expect(response.body).toEqual(mockTodos); // Verifica que el cuerpo de la respuesta sea igual a mockTodos
     });
+    test('getAllTodos debe manejar un error desconocido y responder con el código de estado 500', async () => {
+      // Simula un error no estándar en getAllTodos
+      todoService.getAllTodos = jest.fn().mockImplementation(() => {
+        throw {}; // Lanza un objeto vacío para simular un error no estándar
+      });
+
+      const response = await request(app).get('/todos');
+
+      expect(response.statusCode).toBe(500);
+      expect(response.text).toContain('Error desconocido al obtener todos los Todos');
+    });
   });
   describe('POST /todos', () => {
     test('addTodo debe crear un nuevo Todo y responder con el Todo creado', async () => {
@@ -117,6 +128,17 @@ describe('TodoController', () => {
       expect(response.statusCode).toBe(400); // Esperar un código de estado 400 (Bad Request)
       // Verifica el mensaje de error específico
     });
+    test('addTodo debe manejar un error desconocido y responder con el código de estado 500', async () => {
+      // Simula un error no estándar en addTodo
+      todoService.addTodo = jest.fn().mockImplementation(() => {
+        throw {}; // Lanza un objeto vacío para simular un error no estándar
+      });
+
+      const response = await request(app).post('/todos').send({ title: 'Nuevo Todo' });
+
+      expect(response.statusCode).toBe(500);
+      expect(response.text).toContain('Error desconocido al añadir el Todo');
+    });
   });
   describe('PUT /todos', () => {
     test('updateTodo debe actualizar un Todo existente y responder con el Todo actualizado', async () => {
@@ -149,6 +171,22 @@ describe('TodoController', () => {
 
       expect(response.statusCode).toBe(500);
       expect(response.text).toContain(errorMessage);
+    });
+    test('updateTodo debe manejar un error desconocido y responder con el código de estado 500', async () => {
+      const mockId = 'mock-id-1';
+
+      // Simula que getTodo devuelve un Todo para evitar el error 'Todo no encontrado'
+      todoService.getTodo = jest.fn().mockReturnValue({ id: mockId, title: 'Existente Todo', isCompleted: false });
+
+      // Simula un error no estándar en updateTodo
+      todoService.updateTodo = jest.fn().mockImplementation(() => {
+        throw {}; // Lanza un objeto vacío para simular un error no estándar
+      });
+
+      const response = await request(app).put(`/todos/${mockId}`).send({ title: 'Actualizado Todo', isCompleted: true });
+
+      expect(response.statusCode).toBe(500);
+      expect(response.text).toContain('Error desconocido al actualizar el Todo');
     });
   });
   describe('DELETE / todos', () => {

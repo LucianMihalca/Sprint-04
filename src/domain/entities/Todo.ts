@@ -1,11 +1,11 @@
 /**
  * Clase `Todo`: Representa una entidad de dominio en el sistema.
- * 
- * - Responsabilidades: 
+ *
+ * - Responsabilidades:
  *   1. Define la estructura y características de un "todo" (tarea).
  *   2. Encapsula las propiedades específicas de un "todo" como su 'id', 'title' y 'isCompleted'.
  *
- * - Importante: 
+ * - Importante:
  *   Esta clase NO se extiende en `TodoService` por varias razones:
  *   a. Separación de Responsabilidades: `TodoService` maneja la lógica de negocio relacionada con los "todos", mientras que `Todo` es simplemente una representación de la entidad "todo".
  *   b. Principio de Única Responsabilidad: Extender `Todo` en `TodoService` mezclaría la lógica de la entidad (qué es un "todo") con la lógica del servicio (cómo se gestionan los "todos"), violando este principio.
