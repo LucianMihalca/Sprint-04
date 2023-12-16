@@ -5,7 +5,7 @@
 > [!NOTE]
 > En esta entrega crearemos un servidor utilizando Express.js, 
 para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal. 
-Implementaremos las siguientes funcionalidades:
+
 
 __1. Añadir una tarea a la lista:__
 - Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
@@ -22,20 +22,20 @@ __4. Mostrar la lista de tareas:__
 # 
 
 > [!IMPORTANT]
-> __Nivel ⭐️__
+> __Nivel ⭐️__<br>
 > ✅ Documenta y adjunta las comprobaciones con una plataforma como Postman o Insomnia en tu proyecto.
-<br>
+
 
 # 
 > [!IMPORTANT]
-> __Nivel ⭐️⭐️__
+> __Nivel ⭐️⭐️__<br>
 > ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache. 
 > Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.
 > ✅ Añade un middleware devuelva un HTTP Status 401 - Unauthorized si la cabecera de la petición no contiene autenticación básica (usuario y contraseña).
 
 # 
 > [!IMPORTANT]
-> __Nivel ⭐️⭐️⭐️__
+> __Nivel ⭐️⭐️⭐️__<br>
 > ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
 
