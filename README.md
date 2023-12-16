@@ -1,8 +1,8 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con<br>
-> 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
+> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con <br>
+> ⚡️ [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
 
@@ -43,44 +43,58 @@
 
 # Pasos para Utilizar el Proyecto
 
-## 1. Preparación del Entorno
+**1. Preparación del Entorno**
 Antes de iniciar, asegúrate de tener instalado en tu sistema:<br>
+
 > [!IMPORTANT]
 >
 > [![Node.js](https://img.shields.io/badge/-Nodejs-black?style=flat&logo=Node.js)](https://nodejs.org/) [![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/)
 
 Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
-## 2. Clonación del Repositorio
-Clona el repositorio del proyecto a tu máquina local utilizando 
+#
+
+**2. Clonación del Repositorio**
+Clona el repositorio del proyecto a tu máquina local utilizando
+
 ```
 git clone [https://github.com/LucianMihalca/Sprint-04.git]
 ```
 
-## 3. Instalación de Dependencias
-Navega a la carpeta del proyecto y ejecuta `npm install` para instalar todas las dependencias necesarias.
+#
 
-## 4. Configuración del Entorno
-Configura las variables de entorno necesarias según las instrucciones proporcionadas en el archivo `.env.example`.
+**3. Instalación de Dependencias**
+Para instalar todas las dependencias necesarias navega a la carpeta del proyecto y ejecuta:
 
-## 5. Iniciando el Proyecto
-Para iniciar el servidor, ejecuta `npm start`. Esto pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
+```
+npm install
+```
+
+#
+
+**4. Para transpilar el proyecto**
+Transpila el código TypeScript en JavaScript en la carpeta ./dist..
+
+```
+npm run build
+```
+
+#
+
+**5. Iniciando el Proyecto**
+Esto iniciar el servidor y pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
+
+```
+npm run start
+```
 
 ## 6. Mapa del Proyecto
+
 Revisa la documentación adjunta para entender la estructura del proyecto y cómo interactuar con las distintas partes de la API.
 
 ## 7. Pruebas y Experimentación
+
 Experimenta con las diferentes funcionalidades de la API, utilizando herramientas como Postman o cURL para enviar solicitudes y recibir respuestas.
-
-
-
-
-
-
-
-
-
-
 
 ## Estructura de Carpetas y Directorios
 
@@ -129,6 +143,4 @@ Experimenta con las diferentes funcionalidades de la API, utilizando herramienta
 ## TodoService (application/TodoService.ts)
 
 > El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
-Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
-
-
+> Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
