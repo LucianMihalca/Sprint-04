@@ -22,8 +22,7 @@
 
 #
 
-> [!IMPORTANT] 
-> **Nivel ⭐️**<br>
+> [!IMPORTANT] ⭐️
 > ✅ Documenta y adjunta las comprobaciones con Postman o Insomnia en tu proyecto.
 
 #
