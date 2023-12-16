@@ -1,15 +1,17 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta entrega crearemos un servidor utilizando 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
-> Para proporcionar servicio a la API REST de la lista de tareas (ToDo-List), aplicamos Clean Architecture.
+> En esta etapa, implementaremos un servidor con 🔋 [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/), 
+> para gestionar la API REST de nuestra lista de tareas (ToDo-List).<br> 
+> Utilizaremos Clean Architecture para asegurar un diseño eficiente y mantenible.
 
----
+#
 
-> [!TIP]
->⚡️ El código fuente de este proyecto está desarrollado en TypeScript, garantizando así un código más robusto y mantenible.<br>
->⚡️ Para asegurar la calidad y el correcto funcionamiento, implementamos pruebas Testing.<br>
->⚡️ Utilizamos la Integración Continua (CI) mediante GitHub Actions para automatizar la ejecución de pruebas y la integración de cambios.
+> [!TIP] 
+> **Características Clave del Proyecto** <br>
+> ⚡️ Código en TypeScript para mayor robustez y mantenibilidad.
+> ⚡️ Pruebas Testing para calidad y fiabilidad.
+> ⚡️ CI con GitHub Actions para automatizar pruebas y cambios.
 
 #
 
