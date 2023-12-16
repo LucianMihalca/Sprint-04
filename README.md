@@ -7,34 +7,35 @@
 para proporcionar servicio a la API REST de la lista de tareas (TODO-LIST), aplicando la arquitectura hexagonal. 
 Implementaremos las siguientes funcionalidades:
 
-**1. Añadir una tarea a la lista:**
+__1. Añadir una tarea a la lista:__
 - Implementaremos una ruta y un controlador para permitir a los usuarios añadir nuevas tareas a su lista.
 
-**2. Marcar una tarea como completada:**
+__2. Marcar una tarea como completada:__
 -  Crearemos una ruta y un controlador para permitir a los usuarios marcar una tarea como completada.
 
-**3. Eliminar una tarea de la lista:**
+__3. Eliminar una tarea de la lista:__
 - Implementaremos una funcionalidad para eliminar tareas de la lista utilizando una ruta y un controlador adecuados
 
-**4. Mostrar la lista de tareas:**
+__4. Mostrar la lista de tareas:__
 - Crearemos una ruta y un controlador para obtener y mostrar la lista completa de tareas a los usuarios.
 
 # 
 
 > [!IMPORTANT]
-> Nivel ⭐️
+> __Nivel ⭐️__
 > ✅ Documenta y adjunta las comprobaciones con una plataforma como Postman o Insomnia en tu proyecto.
+<br>
 
-
+# 
 > [!IMPORTANT]
-> Nivel ⭐️⭐️
+> __Nivel ⭐️⭐️__
 > ✅ Incluye un middleware que añada la cabecera Cache-control: no-cache. 
 > Habilite CORS (Cross-Origin Resource Sharing) en las respuestas, sea mediante Express o mediante otro middleware.
 > ✅ Añade un middleware devuelva un HTTP Status 401 - Unauthorized si la cabecera de la petición no contiene autenticación básica (usuario y contraseña).
 
-
+# 
 > [!IMPORTANT]
-> Nivel ⭐️⭐️⭐️
+> __Nivel ⭐️⭐️⭐️__
 > ✅ Añade testing para comprobar el correcto funcionamiento de la API.
 
 
