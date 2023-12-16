@@ -1,7 +1,8 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con ⚡️<br> > [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
+> En esta etapa del proyecto, nuestro objetivo es implementar un servidor con ⚡️<br>.
+> [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
 
@@ -86,7 +87,7 @@ npm run build
 
 #
 
-**_5. Iniciando el Proyecto_**<br>
+**5. Iniciando el Proyecto**<br>
 
 Esto iniciar el servidor y pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
 
