@@ -23,8 +23,6 @@ class Logger {
   error(message: string) {
     console.error(new Date().toISOString(), 'ERROR:', message);
   }
-
-  // Aquí puedes añadir más métodos para diferentes niveles de logging si lo deseas.
 }
 
 // Se exporta una instancia de Logger para ser utilizada en toda la aplicación.
