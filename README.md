@@ -89,11 +89,13 @@ npm run build
 
 **5. Iniciando el Proyecto**<br>
 
-Esto iniciar el servidor y pondrá en marcha el servidor Express.js y podrás empezar a utilizar la API REST de la lista de tareas.
+Para iniciar y poner en marcha el servidor Express.js, ejecuta el siguiente comando.
 
 ```
 npm run start
 ```
+
+Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
 
 ## 6. Mapa del Proyecto
 
