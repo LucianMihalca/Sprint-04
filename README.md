@@ -187,7 +187,7 @@ npm run test
 
 # Documentación de los Métodos del Controlador TodoController
 
-> [!NOTA]
+> [!NOTE]
 >
 > 1.  Método getAllTodos
 >
