@@ -2,7 +2,7 @@
 
 > [!NOTE]
 >
-> En esta etapa, nuestro objetivo es implementar un servidor con ⚡️:<br>
+> En esta etapa, nuestro objetivo es implementar un servidor con:<br>
 >
 > [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
@@ -246,11 +246,10 @@ npm run test
 >   - **Éxito (200):** Mensaje confirmando la eliminación del Todo.
 >   - **Error (500):** Mensaje de error si ocurre un error inesperado.
 
-
 #
 
 > [!IMPORTANT]
-> 
+>
 > **Manejo de Errores**
 >
 > - **Error al Añadir:** Devuelto si se intenta añadir una tarea sin título o con título inválido.
