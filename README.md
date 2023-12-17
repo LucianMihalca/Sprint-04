@@ -185,17 +185,18 @@ npm run test
 
 #
 
-# Documentación de los Métodos del Controlador TodoController
+**Documentación de los Métodos TodoController**
 
 > [!NOTE]
 >
-> 1.  ⚡️ Método getAllTodos (GET) 
+> 1.  ⚡️ Método getAllTodos (GET)
 >
-> - Obtener Todos (Tareas)
-> - Endpoint: /todos (GET)
-> - Descripción: Retorna una lista de todas las tareas (Todos).
-> - Éxito (200): Devuelve un arreglo de objetos Todo.
-> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+> - **Obtener Todos (Tareas)**
+> - **Endpoint:** /todos (GET)
+> - **Descripción:** Retorna una lista de todas las tareas (Todos).
+> - **Respuestas:**
+>   - **Éxito (200):** Devuelve un arreglo de objetos Todo.
+>   - **Error (500):** Mensaje de error si ocurre un error inesperado.
 
 #
 
@@ -203,14 +204,15 @@ npm run test
 >
 > 2.  ⚡️ Método addTodo (POST)
 >
-> - Añadir un Nuevo Todo (Tarea)
-> - Endpoint: /todos (POST)
-> - Descripción: Añade una nueva tarea a la lista.
-> - Cuerpo de la Solicitud:
-> - title: String (obligatorio)
-> - Éxito (201): Devuelve el objeto Todo creado.
-> - Error (400): Retorna un mensaje de error si el título es inválido o falta.
-> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+> - **Añadir un Nuevo Todo (Tarea)**
+> - **Endpoint:** /todos (POST)
+> - **Descripción:** Añade una nueva tarea a la lista.
+> - **Cuerpo de la Solicitud:**
+>   - `title`: String (obligatorio)
+> - **Respuestas:**
+>   - **Éxito (201):** Devuelve el objeto Todo creado.
+>   - **Error (400):** Mensaje de error si el título es inválido o falta.
+>   - **Error (500):** Mensaje de error si ocurre un error inesperado.
 
 #
 
@@ -218,15 +220,16 @@ npm run test
 >
 > 3.  ⚡️ Método updateTodo (PUT)
 >
-> - Actualizar un Todo (Tarea)
-> - Endpoint: /todos/:id (PUT)
-> - Descripción: Actualiza una tarea existente basada en su ID.
-> - Parámetros:
-> - id: String (obligatorio, parámetro de ruta)
-> - title: String (obligatorio)
-> - Éxito (200): Devuelve el objeto Todo actualizado.
-> - Error (404): Si el Todo con el ID especificado no se encuentra, devuelve un mensaje de error.
-> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+> - **Actualizar un Todo (Tarea)**
+> - **Endpoint:** /todos/:id (PUT)
+> - **Descripción:** Actualiza una tarea existente basada en su ID.
+> - **Parámetros:**
+>   - `id`: String (obligatorio, parámetro de ruta)
+>   - `title`: String (obligatorio)
+> - **Respuestas:**
+>   - **Éxito (200):** Devuelve el objeto Todo actualizado.
+>   - **Error (404):** Mensaje de error si el Todo con el ID especificado no se encuentra.
+>   - **Error (500):** Mensaje de error si ocurre un error inesperado.
 
 #
 
@@ -234,11 +237,22 @@ npm run test
 >
 > 4.  ⚡️ Método removeTodo (DELETE)
 >
-> - Eliminar un Todo (Tarea)
-> - Endpoint: /todos/:id (DELETE)
-> - Descripción: Elimina una tarea basada en su ID.
-> - Parámetros:
-> - id: String (obligatorio, parámetro de ruta)
-> - title: String (obligatorio)
-> - Éxito (200): Devuelve un mensaje confirmando la eliminación del Todo.
-> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+> - **Eliminar un Todo (Tarea)**
+> - **Endpoint:** /todos/:id (DELETE)
+> - **Descripción:** Elimina una tarea basada en su ID.
+> - **Parámetros:**
+>   - `id`: String (obligatorio, parámetro de ruta)
+> - **Respuestas:**
+>   - **Éxito (200):** Mensaje confirmando la eliminación del Todo.
+>   - **Error (500):** Mensaje de error si ocurre un error inesperado.
+
+
+#
+
+> [!IMPORTANT]
+> 
+> **Manejo de Errores**
+>
+> - **Error al Añadir:** Devuelto si se intenta añadir una tarea sin título o con título inválido.
+> - **Error al Actualizar:** Devuelto si se intenta actualizar un Todo que no existe.
+> - **Error al Eliminar:** Devuelto si ocurre un error al intentar eliminar un Todo.
