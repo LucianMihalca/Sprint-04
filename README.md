@@ -189,11 +189,56 @@ npm run test
 
 > [!NOTE]
 >
-> 1.  Método getAllTodos
+> 1.  ⚡️ Método getAllTodos (GET) 
 >
-> Obtener Todos (Tareas)
->
+> - Obtener Todos (Tareas)
 > - Endpoint: /todos (GET)
 > - Descripción: Retorna una lista de todas las tareas (Todos).
 > - Éxito (200): Devuelve un arreglo de objetos Todo.
+> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+
+#
+
+> [!NOTE]
+>
+> 2.  ⚡️ Método addTodo (POST)
+>
+> - Añadir un Nuevo Todo (Tarea)
+> - Endpoint: /todos (POST)
+> - Descripción: Añade una nueva tarea a la lista.
+> - Cuerpo de la Solicitud:
+> - title: String (obligatorio)
+> - Éxito (201): Devuelve el objeto Todo creado.
+> - Error (400): Retorna un mensaje de error si el título es inválido o falta.
+> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+
+#
+
+> [!NOTE]
+>
+> 3.  ⚡️ Método updateTodo (PUT)
+>
+> - Actualizar un Todo (Tarea)
+> - Endpoint: /todos/:id (PUT)
+> - Descripción: Actualiza una tarea existente basada en su ID.
+> - Parámetros:
+> - id: String (obligatorio, parámetro de ruta)
+> - title: String (obligatorio)
+> - Éxito (200): Devuelve el objeto Todo actualizado.
+> - Error (404): Si el Todo con el ID especificado no se encuentra, devuelve un mensaje de error.
+> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
+
+#
+
+> [!NOTE]
+>
+> 4.  ⚡️ Método removeTodo (DELETE)
+>
+> - Eliminar un Todo (Tarea)
+> - Endpoint: /todos/:id (DELETE)
+> - Descripción: Elimina una tarea basada en su ID.
+> - Parámetros:
+> - id: String (obligatorio, parámetro de ruta)
+> - title: String (obligatorio)
+> - Éxito (200): Devuelve un mensaje confirmando la eliminación del Todo.
 > - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
