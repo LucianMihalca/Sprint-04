@@ -129,9 +129,9 @@ Para ejecutar los tests, usa el siguiente comando:
 ```
 npm run test
 ```
-
-Para ejecutar los tests, que incluyen pruebas de los métodos de la API utilizamos supertest.
-
+> [!IMPORTANT]
+> Para ejecutar los tests, que incluyen pruebas de los métodos de la API utilizamos supertest.
+>
 >`supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
 > Esto significa que puedes probar tus endpoints de la API, asegurándote de que respondan como se espera bajo diferentes circunstancias y entradas.
 
