@@ -1,8 +1,10 @@
 # API ToDo-List Clean Architecture
 
 > [!NOTE]
-> En esta etapa, nuestro objetivo es implementar un servidor con ⚡️
-> <br> [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
+>
+> En esta etapa, nuestro objetivo es implementar un servidor con ⚡️:<br>
+>
+> [![Express.js](https://img.shields.io/badge/-Expressjs-black?style=flat&logo=express)](https://expressjs.com/)<br>
 > Este servidor se encargará de gestionar la API REST para nuestra lista de tareas (ToDo-List).<br>
 > Emplearemos Clean Architecture, asegurando un desarrollo escalable y organizado, facilitando la separación de preocupaciones así como adaptaciones y expansiones eficientes en el futuro.
 
@@ -62,7 +64,7 @@ Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 Clona el repositorio del proyecto a tu máquina local utilizando
 
 ```
-git clone [https://github.com/LucianMihalca/Sprint-04.git]
+git clone https://github.com/LucianMihalca/Sprint-04.git
 ```
 
 #
@@ -89,7 +91,7 @@ npm run build
 
 **5. Iniciando el Proyecto**<br>
 
-Para iniciar y poner en marcha el servidor Express.js, ejecuta el siguiente comando.
+Para iniciar y poner en marcha el servidor Express.js, ejecuta el siguiente comando:
 
 ```
 npm run start
@@ -97,15 +99,17 @@ npm run start
 
 Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
 
-## 6. Mapa del Proyecto
+**6. Ejecutar tests**
 
-Revisa la documentación adjunta para entender la estructura del proyecto y cómo interactuar con las distintas partes de la API.
+Para ejecutar los tests, usa el siguiente comando:
 
-## 7. Pruebas y Experimentación
+```
+npm run test
+```
 
-Experimenta con las diferentes funcionalidades de la API, utilizando herramientas como Postman o cURL para enviar solicitudes y recibir respuestas.
+#
 
-## Estructura de Carpetas y Directorios
+**Estructura de Carpetas y Directorios**
 
 ```
 
