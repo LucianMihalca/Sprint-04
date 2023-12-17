@@ -67,6 +67,26 @@ Clona el repositorio del proyecto a tu máquina local utilizando
 git clone https://github.com/LucianMihalca/Sprint-04.git
 ```
 
+> [!IMPORTANT]
+> Una vez clonado el repositorio es importante realizar los siguientes pasos :
+>
+> **Elimina el Directorio Git Existente:**
+>
+> ```bash
+>  rm -rf .git
+> ```
+>
+> Esto asegurará que puedas iniciar un nuevo repositorio Git para tu proyecto, libre de la historia y commits anteriores.<br>
+>
+> **Inicializa tu Propio Repositorio Git:**
+>
+> Ejecuta el siguiente comando en la raíz del proyecto clonado:
+>
+> ```bash
+> git init
+> ```
+> Esto creará un nuevo directorio .git, permitiéndote comenzar tu propio historial de versiones.
+
 #
 
 **3. Instalación de Dependencias**<br>
@@ -74,7 +94,9 @@ git clone https://github.com/LucianMihalca/Sprint-04.git
 Para instalar todas las dependencias necesarias navega a la carpeta del proyecto y ejecuta:
 
 ```
+
 npm install
+
 ```
 
 #
@@ -84,7 +106,9 @@ npm install
 Transpila el código TypeScript en JavaScript en la carpeta ./dist..
 
 ```
+
 npm run build
+
 ```
 
 #
@@ -94,7 +118,9 @@ npm run build
 Para iniciar y poner en marcha el servidor Express.js, ejecuta el siguiente comando:
 
 ```
+
 npm run start
+
 ```
 
 Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
@@ -104,7 +130,9 @@ Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
 Para ejecutar los tests, usa el siguiente comando:
 
 ```
+
 npm run test
+
 ```
 
 #
@@ -113,43 +141,43 @@ npm run test
 
 ```
 
-├── __tests__
-│   ├── application
-│   │   └── TodoServices.test.ts
-│   └── controller
-│       ├── delete
-│       │   └── delete-TodoController.test.ts
-│       ├── get
-│       │   └── get-TodoController.test.ts
-│       ├── post
-│       │   └── post-TodoController.test.ts
-│       └── put
-│           └── put-TodoController.test.ts
+├── **tests**
+│ ├── application
+│ │ └── TodoServices.test.ts
+│ └── controller
+│ ├── delete
+│ │ └── delete-TodoController.test.ts
+│ ├── get
+│ │ └── get-TodoController.test.ts
+│ ├── post
+│ │ └── post-TodoController.test.ts
+│ └── put
+│ └── put-TodoController.test.ts
 ├── application
-│   └── TodoService.ts
+│ └── TodoService.ts
 ├── domain
-│   ├── entities
-│   │   └── Todo.ts
-│   └── interfaces
-│       └── IIdGenerator.ts
+│ ├── entities
+│ │ └── Todo.ts
+│ └── interfaces
+│ └── IIdGenerator.ts
 ├── index.ts
 ├── infrastructure
-│   ├── adapters
-│   │   ├── controller
-│   │   │   └── TodoController.ts
-│   │   ├── middlewares
-│   │   │   ├── basicAuthMiddleware.ts
-│   │   │   ├── loggerMiddleware.ts
-│   │   │   └── noCacheMiddleware.ts
-│   │   └── routes
-│   │       └── todoRoutes.ts
-│   └── services
-│       ├── idGenerator
-│       │   └── UuidGenerator.ts
-│       └── logger
-│           └── logger.ts
+│ ├── adapters
+│ │ ├── controller
+│ │ │ └── TodoController.ts
+│ │ ├── middlewares
+│ │ │ ├── basicAuthMiddleware.ts
+│ │ │ ├── loggerMiddleware.ts
+│ │ │ └── noCacheMiddleware.ts
+│ │ └── routes
+│ │ └── todoRoutes.ts
+│ └── services
+│ ├── idGenerator
+│ │ └── UuidGenerator.ts
+│ └── logger
+│ └── logger.ts
 └── repositories
-    └── TodoRepository.ts
+└── TodoRepository.ts
 
 ```
 
@@ -157,3 +185,7 @@ npm run test
 
 > El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
 > Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
+
+```
+
+```
