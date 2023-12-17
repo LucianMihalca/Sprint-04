@@ -129,10 +129,12 @@ Para ejecutar los tests, usa el siguiente comando:
 ```
 npm run test
 ```
+
 > [!IMPORTANT]
 > Para ejecutar los tests, que incluyen pruebas de los métodos de la API utilizamos supertest.
 >
->`supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
+> `supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
+>
 > Esto significa que puedes probar tus endpoints de la API, asegurándote de que respondan como se espera bajo diferentes circunstancias y entradas.
 
 #
@@ -180,12 +182,14 @@ npm run test
 └── TodoRepository.ts
 
 ```
+#
 
-## TodoService (application/TodoService.ts)
+# Documentación de los Métodos del Controlador TodoController
 
-> El TodoService es una clase central en la aplicación, encargada de manejar las operaciones relacionadas con los objetos Todo.
-> Utiliza el patrón de diseño repositorio, implementando la interfaz TodoRepository, y se encarga de las operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de los Todo.
-
-```
-
-```
+> [!NOTA]
+> 1.  Método getAllTodos
+> Obtener Todos (Tareas)
+> - Endpoint: /todos (GET)
+> - Descripción: Retorna una lista de todas las tareas (Todos).
+> - Éxito (200): Devuelve un arreglo de objetos Todo.
+> - Error (500): Si ocurre un error inesperado, devuelve un mensaje de error.
