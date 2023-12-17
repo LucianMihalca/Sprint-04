@@ -12,7 +12,7 @@
 
 > [!TIP]
 >
-> **Características Clave del Proyecto**
+> 📂 **Características Clave del Proyecto**
 >
 > ⚡️ Código en TypeScript para mayor robustez y mantenibilidad.<br>
 > ⚡️ Pruebas Testing para calidad y fiabilidad.<br>
@@ -43,7 +43,7 @@
 
 #
 
-# Pasos para Utilizar el Proyecto
+# 💡 Pasos para Utilizar el Proyecto
 
 **1. Preparación del Entorno**<br>
 
@@ -61,31 +61,32 @@ Estos son esenciales para ejecutar y gestionar las dependencias del proyecto.
 
 **2. Clonación del Repositorio**<br>
 
-Clona el repositorio del proyecto a tu máquina local utilizando
+Clona el repositorio a tu máquina local usando:
 
 ```
 git clone https://github.com/LucianMihalca/Sprint-04.git
 ```
 
 > [!IMPORTANT]
-> Una vez clonado el repositorio es importante realizar los siguientes pasos :
+> Tras clonar, prepara el proyecto para tu uso personal:
 >
-> **Elimina el Directorio Git Existente:**
+> **Elimina el Directorio Git Existente:**<br>
+>
+> Esto remueve la historia previa y te permite empezar con un historial limpio.
 >
 > ```bash
 >  rm -rf .git
 > ```
 >
-> Esto asegurará que puedas iniciar un nuevo repositorio Git para tu proyecto, libre de la historia y commits anteriores.<br>
+> **Inicializa tu Propio Repositorio Git:**<br>
 >
-> **Inicializa tu Propio Repositorio Git:**
->
-> Ejecuta el siguiente comando en la raíz del proyecto clonado:
+> En la raíz del proyecto clonado, inicia un nuevo repositorio Git:
 >
 > ```bash
 > git init
 > ```
-> Esto creará un nuevo directorio .git, permitiéndote comenzar tu propio historial de versiones.
+>
+> Esto te permite comenzar tu propio control de versiones.
 
 #
 
@@ -94,9 +95,7 @@ git clone https://github.com/LucianMihalca/Sprint-04.git
 Para instalar todas las dependencias necesarias navega a la carpeta del proyecto y ejecuta:
 
 ```
-
 npm install
-
 ```
 
 #
@@ -106,9 +105,7 @@ npm install
 Transpila el código TypeScript en JavaScript en la carpeta ./dist..
 
 ```
-
 npm run build
-
 ```
 
 #
@@ -118,9 +115,7 @@ npm run build
 Para iniciar y poner en marcha el servidor Express.js, ejecuta el siguiente comando:
 
 ```
-
 npm run start
-
 ```
 
 Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
@@ -130,10 +125,13 @@ Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
 Para ejecutar los tests, usa el siguiente comando:
 
 ```
-
 npm run test
-
 ```
+
+Para ejecutar los tests, que incluyen pruebas de los métodos de la API utilizamos supertest.
+
+`supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
+Esto significa que puedes probar tus endpoints de la API, asegurándote de que respondan como se espera bajo diferentes circunstancias y entradas.
 
 #
 
