@@ -120,6 +120,8 @@ npm run start
 
 Esto te permitirá empezar a utilizar la API REST de la lista de tareas.
 
+#
+
 **6. Ejecutar tests**
 
 Para ejecutar los tests, usa el siguiente comando:
@@ -130,12 +132,12 @@ npm run test
 
 Para ejecutar los tests, que incluyen pruebas de los métodos de la API utilizamos supertest.
 
-`supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
-Esto significa que puedes probar tus endpoints de la API, asegurándote de que respondan como se espera bajo diferentes circunstancias y entradas.
+>`supertest` es una librería que nos permite realizar pruebas HTTP de alto nivel, imitando las llamadas al servidor en un entorno de prueba.
+> Esto significa que puedes probar tus endpoints de la API, asegurándote de que respondan como se espera bajo diferentes circunstancias y entradas.
 
 #
 
-**Estructura de Carpetas y Directorios**
+🌳 **Estructura de Carpetas y Directorios**
 
 ```
 
